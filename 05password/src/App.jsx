@@ -19,7 +19,7 @@ function App() {
         str += '0123456789'
       }
       if(symbolAllowed){
-        str += '!@#$%^&*(){}[]'
+        str += '!@#$%ls^&*(){}[]'
       }
 
       for(let i = 0; i < length; i++){
