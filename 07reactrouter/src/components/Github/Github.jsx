@@ -4,17 +4,19 @@ import {useLoaderData} from 'react-router-dom'
 
 function Github() {
 
-   
+   const data = useLoaderData()
 
-    const [data, setData] = React.useState([])
-    useEffect(() => {
-        fetch('https://api.github.com/users/sanatan-dive')
-        .then((response) => response.json())
-        .then(data => {
-            console.log(data)
-            setData(data)
-        })
-    }, [])
+    // const [data, setData] = React.useState([])
+    // useEffect(() => {
+    //     fetch('https://api.github.com/users/sanatan-dive')
+    //     .then((response) => response.json())
+    //     .then(data => {
+    //         console.log(data)
+    //         setData(data)
+    //     })
+    // }, [])
+
+   
 
   return (
     <div className=' border-4   border-orange-600 text-center px-32 m-4 bg-gray-600 text-white p-4 text-3xl shadow-xl rounded-md'>
@@ -33,8 +35,7 @@ function Github() {
 
 export default Github
 
-
-// export const githubInfoLoader = async () => {
-//     const response = await fetch('https://api.github.com/users/hiteshchoudhary')
-//     return response.json()
-// }
+export const githubInfoLoader = async () => {
+    const response = await fetch('https://api.github.com/users/sanatan-dive')
+    return response.json()
+}
